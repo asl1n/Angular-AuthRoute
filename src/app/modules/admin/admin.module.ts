@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { ArkoComponent } from './components/arko/arko.component';
+import { NavComponent } from './components/nav/nav.component';
+import { MainComponent } from './components/main/main.component';
+import { SecondPageComponent } from './components/second-page/second-page.component';
 
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    ArkoComponent
+    NavComponent,
+    MainComponent,
+    SecondPageComponent,
   ],
   imports: [
     CommonModule,
