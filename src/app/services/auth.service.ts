@@ -25,8 +25,8 @@ export class AuthService {
     this.router.navigate(['login']);
   }
 
-  login({ email, password }: { email: string, password: string }): Observable<any> {
-    if (email === 'Admin@gmail.com' && password === 'admin') {
+  login({ email, password }: any): Observable<any> {
+    if (email === 'admin@gmail.com' && password === 'admin') {
       this.setToken('token');
       return of({ success: true });
     }

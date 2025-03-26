@@ -11,18 +11,23 @@ import { AuthService } from 'src/app/services/auth.service';
 export class LoginComponent {
 
   loginForm = new FormGroup({
-    email: new FormControl('', [Validators.required, Validators.email]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+    email: new FormControl(''),
+    password: new FormControl(''),
   });
 
   constructor(private meroService: AuthService,
     private router: Router
   ){}
 
+  ngOnInit() : void{
+    if(this.meroService.isLoggedIn()){
+      this.router.navigate(['admin']);
+    }
+  }
+
   onSubmit() {
     if (this.loginForm.valid) {
-      const returnValues = this.loginForm.getRawValue();
-      this.meroService.login(returnValues).subscribe({
+      this.meroService.login(this.loginForm.value).subscribe({
         next: () => {
           this.router.navigate(['admin']);
         },
