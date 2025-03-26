@@ -30,6 +30,6 @@ This is an Angular-based authentication system built using Angular 16 which has 
 
 - ng serve --open
 
-### How It Works:
+# How It Works:
 - We will see login form and after entering credentials(email: admin@gmail.com password: admin), we will be directed to Admin Page.
 - Can't access Admin page without authentication, also we can't go back to login page without logging out from the admin.
