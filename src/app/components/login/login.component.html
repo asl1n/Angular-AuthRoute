@@ -3,12 +3,12 @@
         <div class="card-body">
             <h2 class="text-center mb-3">Welcome</h2>
             <p class="text-center text-muted">Please enter your login details</p>
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                 <div class="mb-3">
-                    <input type="email" id="email" placeholder="Email" class="form-control" formControlName="email" name="email" required />
+                    <input type="email" placeholder="Email" class="form-control" formControlName="email" name="email" required />
                 </div>
                 <div class="mb-3">
-                    <input type="password" id="password" placeholder="Password" class="form-control" formControlName="password" name="password" required />
+                    <input type="password" placeholder="Password" class="form-control" formControlName="password" name="password" required />
                 </div>
                 <button type="submit" class="btn btn-primary w-100">Login</button>
             </form>
