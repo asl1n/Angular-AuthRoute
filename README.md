@@ -1,27 +1,35 @@
-# AuthRouting
+# Angular Authentication Routing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16.
+This is an Angular-based authentication system built using Angular 16 which has login functionality and route protection using guard.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User authentication with email and password( admin@gmail.com, admin )
 
-## Code scaffolding
+- Login validation using Angular Reactive Forms
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Authentication guard to protect admin routes
 
-## Build
+- Token-based authentication (stored in local storage)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Logout functionality
 
-## Running unit tests
+## Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Clone the Repository:
 
-## Running end-to-end tests
+- git clone https://github.com/asl1n/Angular-AuthRoute.git
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- cd angular-auth-project
 
-## Further help
+### Install Dependencies:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- npm install
+
+### Run the Application:
+
+- ng serve --open
+
+### How It Works:
+- We will see login form and after entering credentials(email: admin@gmail.com password: admin), we will be directed to Admin Page.
+- Can't access Admin page without authentication, also we can't go back to login page without logging out from the admin.
